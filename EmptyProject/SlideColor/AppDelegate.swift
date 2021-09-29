@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  EmptyProject
+//  SlideColor
 //
-//  Created by Вячеслав on 27.09.2021.
+//  Created by Вячеслав on 26.09.2021.
 //
 
 import UIKit
