@@ -72,7 +72,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="setRedTintFromTF:" destination="BYZ-38-t0r" eventType="editingChanged" id="oRv-mD-pOV"/>
+                                    <action selector="setRedTintFromTextField:" destination="BYZ-38-t0r" eventType="editingChanged" id="IkT-hf-eT5"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="qmY-2p-1sG"/>
                                 </connections>
                             </textField>
@@ -82,6 +82,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
+                                    <action selector="setGreenTintFromTextField:" destination="BYZ-38-t0r" eventType="editingChanged" id="OZh-sO-AQQ"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Ofy-rV-W1x"/>
                                 </connections>
                             </textField>
@@ -91,6 +92,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
+                                    <action selector="setBlueTintFromTextField:" destination="BYZ-38-t0r" eventType="editingChanged" id="bAB-DO-cPv"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="KCs-3K-yFa"/>
                                 </connections>
                             </textField>
@@ -100,12 +102,12 @@
                     </view>
                     <connections>
                         <outlet property="blueSlider" destination="aNb-XU-XCj" id="kwF-3e-RnB"/>
-                        <outlet property="blueTF" destination="MEk-V4-CeL" id="weY-fB-Pmc"/>
+                        <outlet property="blueTextField" destination="MEk-V4-CeL" id="qzX-mL-8ty"/>
                         <outlet property="colorView" destination="ulT-Gy-sZn" id="r5b-aV-Cjv"/>
                         <outlet property="greenSlider" destination="Mcx-2u-awc" id="PgR-bP-swV"/>
-                        <outlet property="greenTF" destination="emb-XT-IOV" id="HCs-Vn-pZw"/>
+                        <outlet property="greenTextField" destination="emb-XT-IOV" id="8fo-Le-Q8j"/>
                         <outlet property="redSlider" destination="lKr-oA-Isq" id="CSd-9C-2qU"/>
-                        <outlet property="redTF" destination="32g-Rh-2Pk" id="6hx-bv-vjF"/>
+                        <outlet property="redTextField" destination="32g-Rh-2Pk" id="460-1u-HpE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

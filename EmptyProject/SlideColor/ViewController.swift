@@ -10,56 +10,79 @@ import UIKit
 class ViewController: UIViewController, UITextFieldDelegate {
     
     //MARK: - Outlets TextField and View
-    @IBOutlet weak var redTF: UITextField!
-    @IBOutlet weak var greenTF: UITextField!
-    @IBOutlet weak var blueTF: UITextField!
-    @IBOutlet weak var colorView: UIView!
+
+    @IBOutlet weak private var redTextField: UITextField!
+    @IBOutlet weak private var greenTextField: UITextField!
+    @IBOutlet weak private var blueTextField: UITextField!
+    @IBOutlet weak private var colorView: UIView!
     
     
     //MARK: - Outlets sliders
-    @IBOutlet weak var redSlider: UISlider!
-    @IBOutlet weak var greenSlider: UISlider!
-    @IBOutlet weak var blueSlider: UISlider!
+    @IBOutlet weak private var redSlider: UISlider!
+    @IBOutlet weak private var greenSlider: UISlider!
+    @IBOutlet weak private var blueSlider: UISlider!
     
+    //MARK: - Variable
+    let maxColorValue = Float(255.0)
+    let maxLegthValue = 3
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        redTF.text = String(Int(redSlider.value * 255))
-        greenTF.text = String(Int(greenSlider.value * 255))
-        blueTF.text = String(Int(blueSlider.value * 255))
-        colorView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1.0)
+        setupUI()
         
+    }
+    private func setupUI() {
+        redTextField.text = String(Int(redSlider.value * maxColorValue))
+        greenTextField.text = String(Int(greenSlider.value * maxColorValue))
+        blueTextField.text = String(Int(blueSlider.value * maxColorValue))
+        colorView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1.0)
     }
     //MARK: - slider action
     @IBAction func setRedTint(_ sender: UISlider) {
-        redTF.text = String(Int(sender.value * 255))
+        redTextField.text = String(Int(sender.value * maxColorValue))
         colorView.backgroundColor = UIColor(red: CGFloat(sender.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1.0)
     }
     @IBAction func setGreenTint(_ sender: UISlider) {
-        greenTF.text = String(Int(sender.value * 255))
+        greenTextField.text = String(Int(sender.value * maxColorValue))
         colorView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(sender.value), blue: CGFloat(blueSlider.value), alpha: 1.0)
     }
     @IBAction func setBlueTint(_ sender: UISlider) {
-        blueTF.text = String(Int(sender.value * 255))
+        blueTextField.text = String(Int(sender.value * maxColorValue))
         colorView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(sender.value), alpha: 1.0)
     }
-    
-    @IBAction func setRedTintFromTF(_ sender: UITextField) {
+    @IBAction func setRedTintFromTextField(_ sender: UITextField) {
         if let length = sender.text?.count {
-            if length > 3 {
+            if length > maxLegthValue {
                 sender.text?.removeLast()
             }
         }
     }
-    
+    @IBAction func setGreenTintFromTextField(_ sender: UITextField) {
+        if let length = sender.text?.count {
+            if length > maxLegthValue {
+                sender.text?.removeLast()
+            }
+        }
+    }
+    @IBAction func setBlueTintFromTextField(_ sender: UITextField) {
+        if let length = sender.text?.count {
+            if length > maxLegthValue {
+                sender.text?.removeLast()
+            }
+        }
+    }
+    //Функия вызывается при клике на Return
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        let red = Int(redTF.text ?? "127")
-        let green = Int(greenTF.text ?? "127")
-        let blue = Int(blueTF.text ?? "127")
-        
-        redSlider.value = Float(red!) / 255
-        greenSlider.value = Float(green!) / 255
-        blueSlider.value = Float(blue!) / 255
+        guard let red = redTextField.text, let green = greenTextField.text, let blue = blueTextField.text else {
+            return false
+        }
+        if Float(textField.text!)! > maxColorValue {
+            setupUI()
+            return false
+        }
+        redSlider.value = Float(red)! / Float(maxColorValue)
+        greenSlider.value = Float(green)! / Float(maxColorValue)
+        blueSlider.value = Float(blue)! / Float(maxColorValue)
         
         colorView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1.0)
         view.endEditing(true)
