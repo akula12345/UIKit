@@ -10,11 +10,11 @@ import UIKit
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     //MARK: - Outlets
-    @IBOutlet weak var genderTextField: UITextField!
-    @IBOutlet weak var genderButton: UIButton!
-    @IBOutlet weak var dateOfBirthTextField: UITextField!
-    @IBOutlet weak var datePicker: UIDatePicker!
-    @IBOutlet weak var avaterBGView: UIView!
+    @IBOutlet weak private var genderTextField: UITextField!
+    @IBOutlet weak private var genderButton: UIButton!
+    @IBOutlet weak private var dateOfBirthTextField: UITextField!
+    @IBOutlet weak private var datePicker: UIDatePicker!
+    @IBOutlet weak private var avaterBGView: UIView!
     
     //MARK: - Variable
     let gender = ["Female", "Male", "Unknown"] // создаем массив элементов для пикера выбора пола
