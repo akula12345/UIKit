@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  EmptyProject
+//  Practice_AutoLayout
 //
-//  Created by Вячеслав on 27.09.2021.
+//  Created by Вячеслав on 29.09.2021.
 //
 
 import UIKit
