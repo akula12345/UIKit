@@ -11,39 +11,44 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Practice_AutoLayout" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Practice_Gestures" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="721-Vu-xKP">
-                                <rect key="frame" x="97.5" y="326" width="219" height="254"/>
-                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rP7-A1-vAf">
+                                <rect key="frame" x="88" y="340" width="238" height="226"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="254" id="Fv2-be-HfO"/>
-                                    <constraint firstAttribute="width" constant="219" id="ovH-SA-u3Q"/>
+                                    <constraint firstAttribute="width" constant="238" id="3hI-6Q-gyO"/>
+                                    <constraint firstAttribute="height" constant="226" id="sb2-1H-2P6"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="721-Vu-xKP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="GfX-nD-Qec"/>
-                            <constraint firstItem="721-Vu-xKP" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="rHJ-iJ-l0e"/>
+                            <constraint firstItem="rP7-A1-vAf" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="7Oz-aN-OWF"/>
+                            <constraint firstItem="rP7-A1-vAf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="d5R-nW-ksB"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="centerXConstraint" destination="d5R-nW-ksB" id="Tfa-VT-Wl4"/>
+                        <outlet property="centerYConstraint" destination="7Oz-aN-OWF" id="dwg-T3-UfF"/>
+                        <outlet property="redView" destination="rP7-A1-vAf" id="73g-O8-S7P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="34.782608695652179" y="69.642857142857139"/>
+            <point key="canvasLocation" x="128.98550724637681" y="69.642857142857139"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

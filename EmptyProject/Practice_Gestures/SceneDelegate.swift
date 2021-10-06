@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  Practice_AutoLayout
+//  Practice_Gestures
 //
-//  Created by Вячеслав on 29.09.2021.
+//  Created by Вячеслав on 30.09.2021.
 //
 
 import UIKit
