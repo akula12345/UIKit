@@ -14,23 +14,18 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
     }
     @IBAction func pushRedButton(_ sender: UIButton) {
-        let main = UIStoryboard(name: "Main", bundle: nil)
-        let vc = main.instantiateViewController(withIdentifier: "Result View") as! ResultViewController
-        vc.view.backgroundColor = .red
-        vc.label.text = textField.text
-        self.navigationController?.pushViewController(vc, animated: true)
+        showResult(color: .red)
     }
     @IBAction func pushGreenButton(_ sender: UIButton) {
-        let main = UIStoryboard(name: "Main", bundle: nil)
-        let vc = main.instantiateViewController(withIdentifier: "Result View") as! ResultViewController
-        vc.view.backgroundColor = .green
-        vc.label.text = textField.text
-        self.navigationController?.pushViewController(vc, animated: true)
+        showResult(color: .green)
     }
     @IBAction func pushBlueButton(_ sender: UIButton) {
+        showResult(color: .blue)
+    }
+    private func showResult(color: UIColor) {
         let main = UIStoryboard(name: "Main", bundle: nil)
         let vc = main.instantiateViewController(withIdentifier: "Result View") as! ResultViewController
-        vc.view.backgroundColor = .blue
+        vc.view.backgroundColor = color
         vc.label.text = textField.text
         self.navigationController?.pushViewController(vc, animated: true)
     }

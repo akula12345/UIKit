@@ -32,19 +32,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T7e-hA-uQV">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T7e-hA-uQV">
                                 <rect key="frame" x="94" y="177" width="226" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Xy6-Pk-Gdr"/>
+                                    <constraint firstAttribute="width" constant="226" id="cJt-9x-HuU"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="WyJ-Tz-sCz"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jS7-Sw-vyB">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jS7-Sw-vyB">
                                 <rect key="frame" x="110" y="310" width="194" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="194" id="1oY-SC-UAK"/>
+                                    <constraint firstAttribute="height" constant="60" id="9H2-6g-lFz"/>
+                                </constraints>
                                 <state key="normal" title="Push Red">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -60,10 +66,13 @@
                                     <action selector="pushRedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ljU-in-XzJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s97-S8-uGe">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s97-S8-uGe">
                                 <rect key="frame" x="110" y="414" width="194" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="194" id="3WB-dD-uJg"/>
+                                    <constraint firstAttribute="height" constant="60" id="62M-H2-G4E"/>
+                                </constraints>
                                 <state key="normal" title="Push Green">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -79,10 +88,13 @@
                                     <action selector="pushGreenButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KoS-1w-aVG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hap-um-e8j">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hap-um-e8j">
                                 <rect key="frame" x="110" y="526" width="194" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="fOz-VU-FBg"/>
+                                    <constraint firstAttribute="width" constant="194" id="uIJ-Uz-pYs"/>
+                                </constraints>
                                 <state key="normal" title="Push Blue">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -101,6 +113,16 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="1" green="0.82121684575263321" blue="0.4515705317250911" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Hap-um-e8j" firstAttribute="top" secondItem="s97-S8-uGe" secondAttribute="bottom" constant="52" id="2kQ-aD-cSf"/>
+                            <constraint firstItem="Hap-um-e8j" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="H8D-zJ-N2h"/>
+                            <constraint firstItem="jS7-Sw-vyB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="OpX-ys-sXe"/>
+                            <constraint firstItem="s97-S8-uGe" firstAttribute="top" secondItem="jS7-Sw-vyB" secondAttribute="bottom" constant="44" id="aPy-aP-zwW"/>
+                            <constraint firstItem="T7e-hA-uQV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="89" id="c28-CB-dWU"/>
+                            <constraint firstItem="T7e-hA-uQV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="dCY-wy-L99"/>
+                            <constraint firstItem="jS7-Sw-vyB" firstAttribute="top" secondItem="T7e-hA-uQV" secondAttribute="bottom" constant="99" id="e6J-ge-3OA"/>
+                            <constraint firstItem="s97-S8-uGe" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="sNa-dg-hO6"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Input Text" id="bMR-Qa-Or8"/>
                     <connections>
