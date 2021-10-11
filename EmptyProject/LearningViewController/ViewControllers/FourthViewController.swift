@@ -7,14 +7,10 @@
 
 import UIKit
 
-class ViewController4: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+class FourthViewController: UIViewController {
     @IBAction func goToFifthViewController(_ sender: UIButton) {
         let main = UIStoryboard(name: "Main", bundle: nil)
-        let vc = main.instantiateViewController(withIdentifier: "Fifth View Controller") as! ViewController5
+        guard let vc = main.instantiateViewController(withIdentifier: "Fifth View Controller") as? FifthViewController else { return }
         vc.title = "Fifth View Controller"
         self.navigationController?.pushViewController(vc, animated: true)
     }

@@ -7,11 +7,7 @@
 
 import UIKit
 
-class ViewController5: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+class FifthViewController: UIViewController {
     @IBAction func closeButtonTouchUpInside(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }

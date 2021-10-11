@@ -13,7 +13,7 @@ class SecondViewController: UIViewController {
         super.viewDidLoad()
         self.title = "Second View Controller"
     }
-    @IBAction func closeButtonTouchUpInside(_ sender: UIButton) {
+    @IBAction func closeSecondViewController(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
 }
